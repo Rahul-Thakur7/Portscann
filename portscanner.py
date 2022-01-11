@@ -1,4 +1,14 @@
 from socket import *
+import sys
+
+from colorama import init
+init(strip=not sys.stdout.isatty())
+from termcolor import cprint 
+from pyfiglet import figlet_format
+
+cprint(figlet_format('PORT!', font='starwars'),
+       'yellow', 'on_red', attrs=['bold'])
+
 import time
 startTime = time.time()
 
